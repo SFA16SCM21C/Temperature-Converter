@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TemperatureConverter</string>
+    <string name="Converter">TemperatureConverter</string>
+    <string name="tempText">Enter Temperature</string>
+    <string name="FahtoCel">From Fahrenheit to Celsius</string>
+    <string name="CeltoFah">From Celsius to Fahrenheit</string>
+    <string name="convertBtn">CONVERT</string>
+    <string name="tipValue" />
+    <string name="historyTemp" />
+    <string name="enterTemperature">Enter Temperature</string>
+</resources>

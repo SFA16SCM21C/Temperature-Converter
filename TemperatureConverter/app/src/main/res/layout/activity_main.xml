@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.teleworld.temperatureconverter.MainActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/temperatureText"
+        android:hint="@string/enterTemperature" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/temperatureText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/radioGroup" >
+
+        <RadioButton
+            android:text="@string/FahtoCel"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#202222"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/toCelsiusRadioBtn"
+            android:checked="true"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:text="@string/CeltoFah"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#202222"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/toFahrenheitRadioBtn"
+            android:layout_weight="1" />
+
+    </RadioGroup>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollhistory"
+        android:layout_below="@+id/tipTemp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="11dp">
+
+        <TextView
+            android:text="@string/historyTemp"
+            android:layout_width="match_parent"
+            android:id="@+id/historytemp"
+            android:textSize="25sp"
+            android:textColor="#581845"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_height="wrap_content"
+            tools:ignore="ObsoleteLayoutParam" />
+    </ScrollView>
+
+    <Button
+        android:text="@string/convertBtn"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/convertButton"
+        android:onClick="convertTemp"
+        android:layout_below="@+id/temperatureText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="53dp" />
+
+    <TextView
+        android:text="@string/tipValue"
+        android:textColor="#F23260"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tipTemp"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        android:layout_below="@+id/convertButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
